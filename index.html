@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kagan Love | Technical Instructional Designer Portfolio</title>
+    <meta name="description" content="Professional portfolio of Kagan Love, Technical Instructional Designer. Showcasing developer onboarding, software guides, and interactive eLearning experiences.">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-left"></div>
+
+    <!-- Header & Navigation -->
+    <header id="main-header">
+        <div class="container nav-container">
+            <a href="#" class="logo" id="header-logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10"></path><path d="M6 10h10"></path></svg>
+                <span>Kagan Love</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#process" class="nav-link">Design Process</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Theme">
+                    <!-- Sun Icon (default for dark theme to toggle to light) -->
+                    <svg id="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block;"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M4.93 4.93l1.41 1.41"></path><path d="M17.66 17.66l1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="M6.34 17.66l-1.41 1.41"></path><path d="M19.07 4.93l-1.41 1.41"></path></svg>
+                    <!-- Moon Icon -->
+                    <svg id="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+                </button>
+                <a href="#contact" class="btn btn-primary" id="cta-header-btn">Get In Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-subtitle">Technical Instructional Designer</span>
+                <h1 class="hero-title" id="main-title">Bridging Code and <span>Effective Learning</span></h1>
+                <p class="hero-description">
+                    I design high-impact learning experiences that translate complex technologies into digestible, action-oriented curricula. Specializing in developer onboarding, API documentation tutorials, and interactive training environments.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary" id="cta-hero-primary">Explore My Work</a>
+                    <a href="#about" class="btn btn-secondary" id="cta-hero-secondary">About My Approach</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-graphic-circle">
+                    <div class="hero-graphic-inner">
+                        <span class="hero-graphic-stat">94%</span>
+                        <span class="hero-graphic-label">Retention Rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Portfolio Gallery</span>
+                <h2 class="section-title">Selected Projects</h2>
+                <p class="section-desc">A selection of my work spanning technical onboarding, interactive scenario-based courses, and standard eLearning packages.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all" id="filter-all">All Projects</button>
+                <button class="filter-tab" data-filter="technical" id="filter-tech">Technical Onboarding</button>
+                <button class="filter-tab" data-filter="storyline" id="filter-storyline">Articulate Storyline</button>
+                <button class="filter-tab" data-filter="scenario" id="filter-scenario">Scenario-Based</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="portfolio-grid">
+                <!-- Flagship Project: REST API Integration -->
+                <div class="project-card glass-card" data-category="technical" id="card-rest-api">
+                    <div class="project-thumbnail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="9" rx="2"></rect><path d="M9 22V9"></path><path d="M15 22V9"></path><path d="M12 2v3"></path><path d="M12 13v.01"></path><path d="M12 17v.01"></path></svg>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Interactive Case Study</span>
+                        <h3 class="project-title">REST API Integration Module</h3>
+                        <p class="project-desc">A comprehensive self-paced onboarding module built to train junior developers and partner engineers on integrating REST APIs, complete with hands-on lab code and troubleshooting guides.</p>
+                        <div class="project-meta">
+                            <div class="project-metrics">
+                                <span class="project-metric">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    35m
+                                </span>
+                                <span class="project-metric">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                                    Technical
+                                </span>
+                            </div>
+                            <a href="projects/developer-onboarding.html" class="project-link" id="link-rest-api">View Module <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- S3 Project Placeholder 1 -->
+                <div class="project-card glass-card" data-category="storyline" id="card-s3-1">
+                    <div class="project-thumbnail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Storyline eLearning</span>
+                        <h3 class="project-title">Product Walkthrough Module</h3>
+                        <p class="project-desc">Interactive software simulation training designed to onboard customer-facing teams onto a newly released SaaS dashboard product.</p>
+                        <div class="project-meta">
+                            <div class="project-metrics">
+                                <span class="project-metric">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    20m
+                                </span>
+                                <span class="project-metric">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    Interactive
+                                </span>
+                            </div>
+                            <!-- Relative link that users can hook up with S3 files locally -->
+                            <a href="s3-projects/product-walkthrough/story.html" class="project-link" id="link-s3-1">Launch Course <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- S3 Project Placeholder 2 -->
+                <div class="project-card glass-card" data-category="scenario" id="card-s3-2">
+                    <div class="project-thumbnail">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Scenario Branching</span>
+                        <h3 class="project-title">Leadership Conflict Resolution</h3>
+                        <p class="project-desc">Branching scenario training developed to guide mid-level managers through workplace communication protocols and dispute mitigation.</p>
+                        <div class="project-meta">
+                            <div class="project-metrics">
+                                <span class="project-metric">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    15m
+                                </span>
+                                <span class="project-metric">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                    Scenario
+                                </span>
+                            </div>
+                            <a href="s3-projects/conflict-resolution/index.html" class="project-link" id="link-s3-2">Launch Course <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Meet Kagan</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-desc">My professional values, instructional background, and tech capabilities.</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Core Values -->
+                <div class="glass-card" id="about-card-bio">
+                    <h3 class="skill-category-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        Professional Bio
+                    </h3>
+                    <p style="font-size: 0.95rem; color: hsl(var(--text-secondary-hsl)); margin-bottom: 16px;">
+                        I am an instructional designer dedicated to helping technologists, customers, and partners level up their expertise. I create learning content that drives product adoption and cuts support ticket volumes.
+                    </p>
+                    <p style="font-size: 0.95rem; color: hsl(var(--text-secondary-hsl));">
+                        By integrating instructional design methodologies with hands-on technical environments, I make learning practical, engaging, and measurable.
+                    </p>
+                </div>
+
+                <!-- Tools & Capabilities -->
+                <div class="glass-card" id="about-card-tools">
+                    <h3 class="skill-category-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 2 18 2 18 6 6 6 6 2"></polygon><rect width="18" height="14" x="3" y="6" rx="2"></rect></svg>
+                        Authoring & Tools
+                    </h3>
+                    <ul class="skill-list">
+                        <li class="skill-tag">Articulate Storyline 360</li>
+                        <li class="skill-tag">Articulate Rise 360</li>
+                        <li class="skill-tag">Figma</li>
+                        <li class="skill-tag">Camtasia</li>
+                        <li class="skill-tag">Adobe Captivate</li>
+                        <li class="skill-tag">Canva</li>
+                        <li class="skill-tag">Audacity</li>
+                    </ul>
+                </div>
+
+                <!-- Tech Skills -->
+                <div class="glass-card" id="about-card-tech">
+                    <h3 class="skill-category-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        Technical Proficiencies
+                    </h3>
+                    <ul class="skill-list">
+                        <li class="skill-tag">REST APIs</li>
+                        <li class="skill-tag">HTML5 / CSS3</li>
+                        <li class="skill-tag">JavaScript (ES6+)</li>
+                        <li class="skill-tag">Git / GitHub</li>
+                        <li class="skill-tag">Markdown</li>
+                        <li class="skill-tag">JSON / YAML</li>
+                        <li class="skill-tag">GenAI Prompting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process Section -->
+    <section class="section" id="process" style="background: linear-gradient(180deg, transparent 0%, var(--glass-bg) 100%);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Methodology</span>
+                <h2 class="section-title">My Design Process</h2>
+                <p class="section-desc">How I construct scalable, result-driven training curricula.</p>
+            </div>
+
+            <div class="timeline" id="design-process-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-item-title">
+                        <span>1. Needs Assessment & Persona Profiling</span>
+                    </div>
+                    <div class="timeline-card">
+                        <p style="font-size: 0.95rem; color: hsl(var(--text-secondary-hsl));">
+                            I start by analyzing performance gaps and building clear learner profile templates to align training with the audience's baseline skillset.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-item-title">
+                        <span>2. Backward Design Mapping</span>
+                    </div>
+                    <div class="timeline-card">
+                        <p style="font-size: 0.95rem; color: hsl(var(--text-secondary-hsl));">
+                            I define learning objectives mapped to Bloom's taxonomy, establishing assessment targets before writing any course content.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-item-title">
+                        <span>3. Storyboarding & Prototyping</span>
+                    </div>
+                    <div class="timeline-card">
+                        <p style="font-size: 0.95rem; color: hsl(var(--text-secondary-hsl));">
+                            I build rapid, wireframe storyboard flows in Figma or Rise 360 to iterate with Subject Matter Experts (SMEs) prior to core development.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-item-title">
+                        <span>4. Media Creation & Lab Coding</span>
+                    </div>
+                    <div class="timeline-card">
+                        <p style="font-size: 0.95rem; color: hsl(var(--text-secondary-hsl));">
+                            I develop custom assets, interactive visual elements, code exercises, or high-fidelity screencasts to structure hands-on labs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-item-title">
+                        <span>5. Evaluation & Accessibility Audit</span>
+                    </div>
+                    <div class="timeline-card">
+                        <p style="font-size: 0.95rem; color: hsl(var(--text-secondary-hsl));">
+                            I conduct detailed UX testing and run accessibility reviews (color contrast checks, screen-reader tab orders) before deployment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Collaborate</span>
+                <h2 class="section-title">Start a Project</h2>
+                <p class="section-desc">Have an instructional challenge or looking to fill a technical curriculum role? Get in touch.</p>
+            </div>
+
+            <div style="max-width: 600px; margin: 0 auto;">
+                <form class="glass-card" id="contact-form" onsubmit="event.preventDefault(); alert('Message sent! (Simulated contact form response)');">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                        <div>
+                            <label for="form-name" style="display: block; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; color: hsl(var(--text-muted-hsl));">Full Name</label>
+                            <input type="text" id="form-name" required placeholder="John Doe" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-sm); border: 1.5px solid hsl(var(--border-color-hsl)); background: rgba(0,0,0,0.15); color: #fff; outline: none; transition: border-color var(--transition-fast);">
+                        </div>
+                        <div>
+                            <label for="form-email" style="display: block; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; color: hsl(var(--text-muted-hsl));">Email Address</label>
+                            <input type="email" id="form-email" required placeholder="john@example.com" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-sm); border: 1.5px solid hsl(var(--border-color-hsl)); background: rgba(0,0,0,0.15); color: #fff; outline: none; transition: border-color var(--transition-fast);">
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 24px;">
+                        <label for="form-message" style="display: block; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; color: hsl(var(--text-muted-hsl));">Your Message</label>
+                        <textarea id="form-message" required rows="5" placeholder="Let's build something together..." style="width: 100%; padding: 12px 16px; border-radius: var(--radius-sm); border: 1.5px solid hsl(var(--border-color-hsl)); background: rgba(0,0,0,0.15); color: #fff; outline: none; transition: border-color var(--transition-fast); resize: vertical; font-family: inherit;"></textarea>
+                    </div>
+                    <div style="text-align: right;">
+                        <button type="submit" class="btn btn-primary" id="btn-submit-form" style="width: 100%; justify-content: center;">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <a href="#" class="logo" style="font-size: 1.25rem;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path></svg>
+                    <span>Kagan Love</span>
+                </a>
+            </div>
+            <ul class="social-links">
+                <li><a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a></li>
+                <li><a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a></li>
+            </ul>
+            <p>&copy; 2026 Kagan Love. Built with web standards. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

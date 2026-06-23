@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Developer Onboarding Module | Kagan Love</title>
+    <meta name="description" content="Instructional design case study detailing the Developer Onboarding Module for REST API Integration by Kagan Love.">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-left"></div>
+
+    <!-- Header & Navigation -->
+    <header id="main-header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo" id="header-logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10"></path><path d="M6 10h10"></path></svg>
+                <span>Kagan Love</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="../index.html#about" class="nav-link">About</a></li>
+                    <li><a href="../index.html#process" class="nav-link">Design Process</a></li>
+                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Theme">
+                    <svg id="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M4.93 4.93l1.41 1.41"></path><path d="M17.66 17.66l1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="M6.34 17.66l-1.41 1.41"></path><path d="M19.07 4.93l-1.41 1.41"></path></svg>
+                    <svg id="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+                </button>
+                <a href="../index.html" class="btn btn-secondary">Back to Portfolio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero">
+        <div class="container case-study-header-grid">
+            <div>
+                <span class="hero-subtitle">Flagship Technical Case Study</span>
+                <h1 class="case-study-title" id="case-study-main-title">Developer Onboarding Module:<br><span>Building & Testing a REST API Integration</span></h1>
+            </div>
+            
+            <div class="case-study-summary-grid">
+                <div>
+                    <div class="summary-item-label">Target Audience</div>
+                    <div class="summary-item-value">Junior Developers / Partner Engineers</div>
+                </div>
+                <div>
+                    <div class="summary-item-label">Duration</div>
+                    <div class="summary-item-value">30–45 Minutes (Self-Paced)</div>
+                </div>
+                <div>
+                    <div class="summary-item-label">Focus Area</div>
+                    <div class="summary-item-value">API Integration & Debugging</div>
+                </div>
+                <div>
+                    <div class="summary-item-label">ID Model</div>
+                    <div class="summary-item-value">Gagne's 9 Events / Backward Design</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <main class="case-study-content">
+        <div class="container cs-grid">
+            <!-- Main Content Area -->
+            <div>
+                <!-- Section 1: Context & Problem -->
+                <section class="cs-section">
+                    <h3>Project Overview & Challenge</h3>
+                    <p style="margin-bottom: 16px;">
+                        Onboarding new developers or third-party partner integration engineers is a significant operational bottleneck. When documentation is dense or lacking structured onboarding pathways, developers take longer to achieve their first successful API call (time-to-first-API-call). This results in increased support tickets and delayed product launches.
+                    </p>
+                    <p>
+                        This module was designed as a performance-driven, interactive walkthrough to guide junior engineers through configuring credentials, making authenticated requests, inspecting responses, and handling HTTP errors in a sandbox environment.
+                    </p>
+                </section>
+
+                <!-- Section 2: Timeline Module Outline -->
+                <section class="cs-section" id="curriculum-outline">
+                    <h3>Module Outline (30–45 Min Curriculum)</h3>
+                    <p style="margin-bottom: 16px;">
+                        Designed following Gagne's 9 Events of Instruction to gain attention, guide performance, and verify retention in a modular time budget.
+                    </p>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-item-title">
+                                <span>Unit 1: API Architecture & REST Concepts</span>
+                                <span class="timeline-duration">10 mins</span>
+                            </div>
+                            <div class="timeline-card">
+                                <p style="font-size:0.95rem; color:hsl(var(--text-secondary-hsl)); margin-bottom:8px;">
+                                    Introduction to RESTful principles, request/response cycles, base URLs, resource paths, and headers.
+                                </p>
+                                <ul style="padding-left:20px; font-size:0.9rem; color:hsl(var(--text-muted-hsl));">
+                                    <li>Interactive diagram representing client-server interactions</li>
+                                    <li>Reading resource identifiers (endpoints)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-item-title">
+                                <span>Unit 2: Authentication & Header Credentials</span>
+                                <span class="timeline-duration">10 mins</span>
+                            </div>
+                            <div class="timeline-card">
+                                <p style="font-size:0.95rem; color:hsl(var(--text-secondary-hsl)); margin-bottom:8px;">
+                                    Setting up developer sandbox keys and formatting the <code>Authorization: Bearer</code> header.
+                                </p>
+                                <ul style="padding-left:20px; font-size:0.9rem; color:hsl(var(--text-muted-hsl));">
+                                    <li>Understanding Bearer token syntax</li>
+                                    <li>Securing keys using environment variables rather than hardcoding</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-item-title">
+                                <span>Unit 3: Hands-on Sandbox Lab</span>
+                                <span class="timeline-duration">15 mins</span>
+                            </div>
+                            <div class="timeline-card">
+                                <p style="font-size:0.95rem; color:hsl(var(--text-secondary-hsl)); margin-bottom:8px;">
+                                    Executing calls using simulated code snippets and analyzing JSON payloads.
+                                </p>
+                                <ul style="padding-left:20px; font-size:0.9rem; color:hsl(var(--text-muted-hsl));">
+                                    <li>Performing a GET request to retrieve account details</li>
+                                    <li>Extracting specific data attributes from standard JSON response structures</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-item-title">
+                                <span>Unit 4: Troubleshooting Common Faults</span>
+                                <span class="timeline-duration">10 mins</span>
+                            </div>
+                            <div class="timeline-card">
+                                <p style="font-size:0.95rem; color:hsl(var(--text-secondary-hsl)); margin-bottom:8px;">
+                                    Identifying and correcting authentication errors, rate limiting, and formatting issues.
+                                </p>
+                                <ul style="padding-left:20px; font-size:0.9rem; color:hsl(var(--text-muted-hsl));">
+                                    <li>Deciphering 401, 403, and 429 status codes</li>
+                                    <li>Submitting formatted payloads using proper header parameters</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Hands-on Lab -->
+                <section class="cs-section" id="lab-section">
+                    <h3>Hands-on Lab Snippets</h3>
+                    <p>
+                        Developers learn by writing and testing commands. This terminal simulation displays code blocks for making authenticated GET requests to retrieve user configurations. Select a tab to see different language syntaxes:
+                    </p>
+
+                    <div class="lab-simulator">
+                        <div class="lab-header">
+                            <div class="lab-tabs">
+                                <button class="lab-tab active" data-tab="curl" id="tab-btn-curl">cURL</button>
+                                <button class="lab-tab" data-tab="js" id="tab-btn-js">JavaScript (Fetch)</button>
+                                <button class="lab-tab" data-tab="python" id="tab-btn-python">Python (Requests)</button>
+                                <button class="lab-tab" data-tab="json" id="tab-btn-json">JSON Response</button>
+                            </div>
+                            <button class="lab-copy-btn" id="lab-copy-action">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <div class="lab-content">
+                            <!-- cURL -->
+                            <div class="lab-pane active" id="pane-curl">
+                                <div class="lab-code"><span class="lab-code-comment"># Set your environment variable credentials</span>
+export API_KEY="your_api_token_here"
+
+<span class="lab-code-comment"># Execute an authenticated request to retrieve account detail list</span>
+curl -X GET "https://api.sandbox-platform.com/v1/accounts" \
+  -H "Authorization: Bearer $API_KEY" \
+  -H "Accept: application/json"</div>
+                            </div>
+                            <!-- JS -->
+                            <div class="lab-pane" id="pane-js">
+                                <div class="lab-code"><span class="lab-code-keyword">const</span> apiKey = process.env.API_KEY;
+
+<span class="lab-code-function">async function</span> <span class="lab-code-function">fetchAccountDetails</span>() {
+  <span class="lab-code-keyword">try</span> {
+    <span class="lab-code-keyword">const</span> response = <span class="lab-code-keyword">await</span> <span class="lab-code-function">fetch</span>(<span class="lab-code-string">'https://api.sandbox-platform.com/v1/accounts'</span>, {
+      method: <span class="lab-code-string">'GET'</span>,
+      headers: {
+        <span class="lab-code-string">'Authorization'</span>: <span class="lab-code-string">`Bearer ${apiKey}`</span>,
+        <span class="lab-code-string">'Accept'</span>: <span class="lab-code-string">'application/json'</span>
+      }
+    });
+
+    <span class="lab-code-keyword">if</span> (!response.ok) {
+      <span class="lab-code-keyword">throw new</span> <span class="lab-code-function">Error</span>(<span class="lab-code-string">`HTTP error! Status: ${response.status}`</span>);
+    }
+
+    <span class="lab-code-keyword">const</span> data = <span class="lab-code-keyword">await</span> response.<span class="lab-code-function">json</span>();
+    console.<span class="lab-code-function">log</span>(<span class="lab-code-variable">data</span>);
+  } <span class="lab-code-keyword">catch</span> (error) {
+    console.<span class="lab-code-function">error</span>(<span class="lab-code-string">'Failed to fetch details:'</span>, error);
+  }
+}</div>
+                            </div>
+                            <!-- Python -->
+                            <div class="lab-pane" id="pane-python">
+                                <div class="lab-code"><span class="lab-code-keyword">import</span> os
+<span class="lab-code-keyword">import</span> requests
+
+api_key = os.getenv(<span class="lab-code-string">"API_KEY"</span>)
+url = <span class="lab-code-string">"https://api.sandbox-platform.com/v1/accounts"</span>
+headers = {
+    <span class="lab-code-string">"Authorization"</span>: f<span class="lab-code-string">"Bearer {api_key}"</span>,
+    <span class="lab-code-string">"Accept"</span>: <span class="lab-code-string">"application/json"</span>
+}
+
+response = requests.get(url, headers=headers)
+
+<span class="lab-code-keyword">if</span> response.status_code == 200:
+    data = response.json()
+    print(<span class="lab-code-variable">data</span>)
+<span class="lab-code-keyword">else</span>:
+    print(f<span class="lab-code-string">"Error: {response.status_code}"</span>)</div>
+                            </div>
+                            <!-- JSON -->
+                            <div class="lab-pane" id="pane-json">
+                                <div class="lab-code">{
+  <span class="lab-code-keyword">"status"</span>: <span class="lab-code-string">"success"</span>,
+  <span class="lab-code-keyword">"data"</span>: {
+    <span class="lab-code-keyword">"account_id"</span>: <span class="lab-code-string">"act_897543"</span>,
+    <span class="lab-code-keyword">"org_name"</span>: <span class="lab-code-string">"Apex Solutions"</span>,
+    <span class="lab-code-keyword">"environment"</span>: <span class="lab-code-string">"sandbox"</span>,
+    <span class="lab-code-keyword">"api_version"</span>: <span class="lab-code-string">"2026-04-01"</span>,
+    <span class="lab-code-keyword">"quota_limit"</span>: 10000,
+    <span class="lab-code-keyword">"quota_remaining"</span>: 9942
+  }
+}</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4: Interactive Slide Player (Video walk simulation) -->
+                <section class="cs-section" id="video-walkthrough">
+                    <h3>Simulation Walkthrough</h3>
+                    <p style="margin-bottom: 16px;">
+                        Below is an interactive visual simulator of the screencast guide. Click Play to step through the screencast workflow or navigate manually.
+                    </p>
+
+                    <div class="video-sim">
+                        <div class="video-screen">
+                            <div class="video-slide-bg"></div>
+                            
+                            <!-- Slide 1 -->
+                            <div class="video-slide active" data-slide="0" data-duration="10">
+                                <div class="video-slide-content">
+                                    <h4>Step 1: Set Credentials</h4>
+                                    <p>Open your command line and export the environment variables with your unique Sandbox API Token to prevent hardcoding secrets.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="video-slide" data-slide="1" data-duration="15">
+                                <div class="video-slide-content">
+                                    <h4>Step 2: Construct the Request</h4>
+                                    <p>Using JS or cURL, append the correct <code>Authorization: Bearer</code> header. Ensure you have targeted the Sandbox endpoint rather than Production.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="video-slide" data-slide="2" data-duration="10">
+                                <div class="video-slide-content">
+                                    <h4>Step 3: Run Validation Command</h4>
+                                    <p>Execute the query. Review the JSON result in your terminal. Look for a status status of <code>"success"</code> and your account ID.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="video-slide" data-slide="3" data-duration="10">
+                                <div class="video-slide-content">
+                                    <h4>Step 4: Verify Database Side</h4>
+                                    <p>Log in to your developer console and confirm that the API call registers on the analytics dashboard, completing the integration check.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="video-controls">
+                            <button class="video-play-btn" id="vid-play-toggle" aria-label="Play Walkthrough">
+                                <!-- Play Icon -->
+                                <svg id="vid-play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                <!-- Pause Icon -->
+                                <svg id="vid-pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><rect width="4" height="16" x="6" y="4" rx="1"></rect><rect width="4" height="16" x="14" y="4" rx="1"></rect></svg>
+                            </button>
+                            <div class="video-progress-container">
+                                <div class="video-progress-bar">
+                                    <div class="video-progress-fill" id="vid-progress"></div>
+                                </div>
+                                <div style="display:flex; justify-content:space-between;">
+                                    <span class="video-time" id="vid-step-label">Step 1 of 4</span>
+                                    <span class="video-time" id="vid-time-label">0:00 / 0:45</span>
+                                </div>
+                            </div>
+                            <div style="display:flex; gap:8px;">
+                                <button class="btn btn-secondary" id="vid-prev-btn" style="padding: 8px 12px; font-size: 0.8rem;">Prev</button>
+                                <button class="btn btn-secondary" id="vid-next-btn" style="padding: 8px 12px; font-size: 0.8rem;">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 5: Interactive Knowledge Check Quiz -->
+                <section class="cs-section" id="quiz-section">
+                    <h3>Interactive Knowledge Check</h3>
+                    <p>
+                        Test your understanding of the integration, authorization headers, and endpoint response evaluation:
+                    </p>
+
+                    <div class="quiz-container">
+                        <div class="quiz-header">
+                            <span class="quiz-counter" id="quiz-progress-text">Question 1 of 3</span>
+                            <span class="quiz-score" id="quiz-score-text">Score: 0/3</span>
+                        </div>
+
+                        <div id="quiz-question-box">
+                            <div class="quiz-question" id="quiz-question-text">Loading question...</div>
+                            <div class="quiz-options" id="quiz-options-list">
+                                <!-- Dynamically loaded options -->
+                            </div>
+                        </div>
+
+                        <div class="quiz-feedback" id="quiz-feedback-box">
+                            <div class="quiz-feedback-title" id="quiz-feedback-title">Correct!</div>
+                            <p id="quiz-feedback-text">Feedback text goes here.</p>
+                        </div>
+
+                        <div class="quiz-actions">
+                            <button class="btn btn-primary" id="quiz-action-btn" disabled>Next Question</button>
+                        </div>
+
+                        <div class="quiz-results" id="quiz-results-box">
+                            <div class="quiz-results-score" id="quiz-results-score">3/3</div>
+                            <h4 style="margin-bottom:12px;">Review Completed!</h4>
+                            <p style="color:hsl(var(--text-secondary-hsl)); margin-bottom:24px;">You have completed the REST API Integration knowledge check.</p>
+                            <button class="btn btn-secondary" id="quiz-retry-btn" style="margin:0 auto;">Retry Quiz</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 6: Troubleshooting Accordion -->
+                <section class="cs-section" id="troubleshooting-guide">
+                    <h3>Troubleshooting Guide</h3>
+                    <p>Common failures developers experience when setting up this API integration for the first time:</p>
+
+                    <div class="accordion">
+                        <div class="accordion-item" id="acc-1">
+                            <div class="accordion-header">
+                                <span>1. Received "401 Unauthorized" HTTP Status Code</span>
+                                <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <p style="margin-bottom: 8px;"><strong>Root Cause:</strong> The API gateway failed to validate your authentication token.</p>
+                                <p><strong>Resolution:</strong> Ensure the token value is set correctly in your environment variable. Confirm your request includes the word <code>Bearer</code> followed by a single space and then the API key in the <code>Authorization</code> header (e.g. <code>Bearer sandbox_xyz123...</code>).</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" id="acc-2">
+                            <div class="accordion-header">
+                                <span>2. Received "404 Not Found" HTTP Status Code</span>
+                                <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <p style="margin-bottom: 8px;"><strong>Root Cause:</strong> The request URL or base domain endpoint path was incorrect.</p>
+                                <p><strong>Resolution:</strong> Verify the spelling of the endpoint URL path. Junior developers often target <code>/account</code> instead of the plural <code>/accounts</code>, or miss the API version prefix (<code>/v1/</code>).</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" id="acc-3">
+                            <div class="accordion-header">
+                                <span>3. JSON Parse Errors on Client Side</span>
+                                <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <p style="margin-bottom: 8px;"><strong>Root Cause:</strong> The response was parsed as JSON, but the API returned raw text (often during server errors or firewall blocks).</p>
+                                <p><strong>Resolution:</strong> Log the raw response string before calling <code>response.json()</code> in JS or <code>response.json()</code> in Python. Make sure your request includes the header <code>Accept: application/json</code>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar Info / Case Study Metadata -->
+            <aside>
+                <div class="glass-card persona-card" style="position: sticky; top: 100px;">
+                    <h3 class="skill-category-title" style="border-bottom:none; margin-bottom:16px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        Target Persona
+                    </h3>
+                    <div class="persona-header" style="margin-bottom:12px; padding-bottom:12px;">
+                        <div class="persona-avatar">JD</div>
+                        <div class="persona-title">
+                            <h4>Jamie Davies</h4>
+                            <span>Junior Developer</span>
+                        </div>
+                    </div>
+                    <div class="persona-details" style="grid-template-columns: 1fr; gap: 8px; font-size: 0.85rem;">
+                        <div class="persona-detail-item">
+                            <strong>Technical Background</strong>
+                            <span>Bootcamp graduate, comfortable with JS syntax, but minimal experience debugging live APIs or using cURL commands.</span>
+                        </div>
+                        <div class="persona-detail-item">
+                            <strong>Core Goal</strong>
+                            <span>Onboard quickly to write integrations without constantly waiting for senior developer assistance.</span>
+                        </div>
+                        <div class="persona-detail-item">
+                            <strong>Frustrations</strong>
+                            <span>Overwhelmed by massive swagger documentation pages that lack beginner-friendly examples.</span>
+                        </div>
+                    </div>
+
+                    <h3 class="skill-category-title" style="border-bottom:none; margin-bottom:16px; margin-top:32px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        Learning Objectives
+                    </h3>
+                    <div class="objectives-grid">
+                        <div class="objective-item" style="padding:12px;">
+                            <div class="objective-icon">1</div>
+                            <div class="objective-content">
+                                <p style="font-size:0.85rem;">Format an authenticated GET request using header tokens without exposing keys.</p>
+                                <span class="objective-bloom">Bloom's: Apply</span>
+                            </div>
+                        </div>
+                        <div class="objective-item" style="padding:12px;">
+                            <div class="objective-icon">2</div>
+                            <div class="objective-content">
+                                <p style="font-size:0.85rem;">Extract specific attributes from the returned JSON response payload.</p>
+                                <span class="objective-bloom">Bloom's: Analyze</span>
+                            </div>
+                        </div>
+                        <div class="objective-item" style="padding:12px;">
+                            <div class="objective-icon">3</div>
+                            <div class="objective-content">
+                                <p style="font-size:0.85rem;">Debug integration bugs using HTTP status code responses (401, 404).</p>
+                                <span class="objective-bloom">Bloom's: Evaluate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Notes on Accessibility & AI Process -->
+    <section class="section" style="border-top:1px solid var(--glass-border); padding:60px 0; background:rgba(0,0,0,0.15);">
+        <div class="container">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+                <div class="notes-card">
+                    <h4>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        Accessibility Notes (WCAG 2.1 AA)
+                    </h4>
+                    <p style="margin-bottom:8px; line-height:1.5;">
+                        This portfolio case study and course module page are designed to meet standard accessibility standards:
+                    </p>
+                    <ul style="padding-left:20px; font-size:0.85rem; color:hsl(var(--text-secondary-hsl)); line-height:1.6;">
+                        <li><strong>Screen Reader Semantic Tags</strong>: Structural headings use sequential levels (H1, H2, H3) and proper section landmarks.</li>
+                        <li><strong>Keyboard Accessibility</strong>: Interactive simulators, tabs, and quiz options are built using native HTML buttons or have correct ARIA properties so they can be navigated using standard tab controls and activated via the Enter/Space keys.</li>
+                        <li><strong>High Contrast Color Ratio</strong>: Color themes maintain a high contrast ratio exceeding 4.5:1 for body copy across dark and light settings.</li>
+                    </ul>
+                </div>
+
+                <div class="notes-card">
+                    <h4>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        AI-Assisted Workflow Note
+                    </h4>
+                    <p style="margin-bottom:8px; line-height:1.5;">
+                        This onboarding module demonstrates how artificial intelligence can accelerate instructional design workflows:
+                    </p>
+                    <ul style="padding-left:20px; font-size:0.85rem; color:hsl(var(--text-secondary-hsl)); line-height:1.6;">
+                        <li><strong>Analysis</strong>: Used Gemini to synthesize common junior developer friction points and structure target competencies.</li>
+                        <li><strong>Drafting</strong>: Prompt-engineered core code scripts (cURL, fetch, requests) and troubleshooting flows to match target objectives.</li>
+                        <li><strong>Review & Iteration</strong>: Utilized LLM agents to verify WCAG alignment and cross-validate terminology against real REST API specifications.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Kagan Love. Built with web standards. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+</html>
