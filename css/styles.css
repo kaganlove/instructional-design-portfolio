@@ -3,26 +3,26 @@
 /* CSS Custom Properties for Design System */
 :root {
     /* Color Palette - Dark Mode default for technical premium feel */
-    --bg-primary-hsl: 222, 47%, 9%;
-    --bg-secondary-hsl: 222, 47%, 14%;
-    --bg-tertiary-hsl: 222, 47%, 18%;
+    --bg-primary-hsl: 0, 0%, 4%; /* Black */
+    --bg-secondary-hsl: 0, 0%, 8%;
+    --bg-tertiary-hsl: 0, 0%, 12%;
     
-    --text-primary-hsl: 210, 40%, 98%;
-    --text-secondary-hsl: 215, 20%, 75%;
-    --text-muted-hsl: 215, 16%, 50%;
+    --text-primary-hsl: 0, 0%, 100%; /* White */
+    --text-secondary-hsl: 0, 0%, 83%;
+    --text-muted-hsl: 0, 0%, 64%; /* Silver */
     
-    --primary-hsl: 239, 84%, 67%; /* Indigo */
-    --secondary-hsl: 271, 91%, 65%; /* Purple */
-    --accent-hsl: 171, 100%, 41%; /* Teal */
+    --primary-hsl: 0, 72%, 51%; /* Red */
+    --secondary-hsl: 0, 0%, 64%; /* Silver */
+    --accent-hsl: 0, 72%, 60%; /* Light Red */
     
     --success-hsl: 142, 71%, 45%;
     --error-hsl: 0, 84%, 60%;
     --warning-hsl: 38, 92%, 50%;
 
-    --border-color-hsl: 217, 32%, 18%;
-    --glass-bg: rgba(15, 23, 42, 0.6);
+    --border-color-hsl: 0, 0%, 16%;
+    --glass-bg: rgba(10, 10, 10, 0.7);
     --glass-border: rgba(255, 255, 255, 0.08);
-    --glow-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+    --glow-shadow: 0 0 25px rgba(229, 9, 20, 0.12);
 
     /* Fonts */
     --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -41,22 +41,22 @@
 
 /* Light Theme Variables */
 :root.light-theme {
-    --bg-primary-hsl: 210, 40%, 98%;
+    --bg-primary-hsl: 0, 0%, 98%; /* White */
     --bg-secondary-hsl: 0, 0%, 100%;
-    --bg-tertiary-hsl: 210, 40%, 95%;
+    --bg-tertiary-hsl: 0, 0%, 92%;
     
-    --text-primary-hsl: 222, 47%, 11%;
-    --text-secondary-hsl: 215, 25%, 27%;
-    --text-muted-hsl: 215, 16%, 45%;
+    --text-primary-hsl: 0, 0%, 10%; /* Black */
+    --text-secondary-hsl: 0, 0%, 25%;
+    --text-muted-hsl: 0, 0%, 45%;
     
-    --primary-hsl: 239, 84%, 57%;
-    --secondary-hsl: 271, 91%, 55%;
-    --accent-hsl: 171, 100%, 35%;
+    --primary-hsl: 0, 72%, 51%; /* Red */
+    --secondary-hsl: 0, 0%, 45%; /* Silver/Slate */
+    --accent-hsl: 0, 72%, 40%;
     
-    --border-color-hsl: 214, 32%, 91%;
+    --border-color-hsl: 0, 0%, 85%;
     --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(99, 102, 241, 0.1);
-    --glow-shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
+    --glass-border: rgba(229, 9, 20, 0.1);
+    --glow-shadow: 0 10px 30px rgba(229, 9, 20, 0.06);
 }
 
 /* Reset & Base Styles */
@@ -103,7 +103,7 @@ button, input, textarea, select {
     position: absolute;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.05) 50%, transparent 100%);
+    background: radial-gradient(circle, rgba(229, 9, 20, 0.1) 0%, rgba(163, 163, 163, 0.03) 50%, transparent 100%);
     top: -100px;
     right: -100px;
     z-index: -1;
@@ -116,7 +116,7 @@ button, input, textarea, select {
     position: absolute;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, rgba(99, 102, 241, 0.04) 50%, transparent 100%);
+    background: radial-gradient(circle, rgba(163, 163, 163, 0.08) 0%, rgba(229, 9, 20, 0.02) 50%, transparent 100%);
     top: 600px;
     left: -200px;
     z-index: -1;
@@ -223,12 +223,12 @@ header {
 .btn-primary {
     background: linear-gradient(135deg, hsl(var(--primary-hsl)), hsl(var(--secondary-hsl)));
     color: #fff;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.25);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.35);
 }
 
 .btn-secondary {
@@ -275,7 +275,7 @@ header {
 
 .glass-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(99, 102, 241, 0.3);
+    border-color: rgba(229, 9, 20, 0.3);
 }
 
 /* Hero Section */
@@ -344,7 +344,7 @@ header {
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(168,85,247,0.2) 100%);
+    background: linear-gradient(135deg, rgba(229,9,20,0.15) 0%, rgba(163,163,163,0.15) 100%);
     border: 1.5px dashed hsl(var(--primary-hsl));
     display: flex;
     justify-content: center;
@@ -460,7 +460,7 @@ header {
     background: hsl(var(--primary-hsl));
     color: #fff;
     border-color: hsl(var(--primary-hsl));
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25);
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.25);
 }
 
 /* Projects Grid */
@@ -481,7 +481,7 @@ header {
 .project-thumbnail {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, rgba(99,102,241,0.1) 0%, rgba(168,85,247,0.1) 100%);
+    background: linear-gradient(135deg, rgba(229,9,20,0.08) 0%, rgba(163,163,163,0.08) 100%);
     position: relative;
     border-bottom: 1px solid var(--glass-border);
     display: flex;
@@ -764,7 +764,7 @@ header {
 .objective-icon {
     width: 32px;
     height: 32px;
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(229, 9, 20, 0.1);
     color: hsl(var(--primary-hsl));
     border-radius: 8px;
     display: flex;
@@ -985,7 +985,7 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 80%);
+    background: radial-gradient(circle, rgba(229, 9, 20, 0.15) 0%, transparent 80%);
     z-index: 1;
 }
 
@@ -1089,7 +1089,7 @@ header {
     font-size: 0.9rem;
     font-weight: 700;
     color: hsl(var(--primary-hsl));
-    background: rgba(99, 102, 241, 0.1);
+    background: rgba(229, 9, 20, 0.1);
     padding: 4px 12px;
     border-radius: 12px;
 }
@@ -1134,7 +1134,7 @@ header {
 
 .quiz-option.selected {
     border-color: hsl(var(--primary-hsl));
-    background: rgba(99, 102, 241, 0.08);
+    background: rgba(229, 9, 20, 0.08);
     color: hsl(var(--text-primary-hsl));
 }
 
@@ -1265,8 +1265,8 @@ header {
 
 /* Accessibility & AI notes styling */
 .notes-card {
-    background: rgba(99, 102, 241, 0.05);
-    border: 1px solid rgba(99, 102, 241, 0.15);
+    background: rgba(229, 9, 20, 0.05);
+    border: 1px solid rgba(229, 9, 20, 0.15);
     border-radius: var(--radius-md);
     padding: 24px;
     margin-bottom: 32px;
@@ -1373,3 +1373,19 @@ footer {
         left: 7px;
     }
 }
+
+/* Hero Profile Photo Styling */
+.hero-profile-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: var(--radius-xl);
+    border: 3px solid hsl(var(--secondary-hsl)); /* Silver */
+    box-shadow: 0 10px 30px rgba(229, 9, 20, 0.15); /* Red glow */
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+.hero-profile-photo:hover {
+    transform: scale(1.03);
+    border-color: hsl(var(--primary-hsl)); /* Red on hover */
+}
+
