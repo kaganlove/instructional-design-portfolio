@@ -24,7 +24,7 @@ git commit -m "Initial commit: Portfolio structure and REST API module"
 git branch -M main
 
 # Link to your remote GitHub repository (replace with your actual GitHub URL from the repository page)
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/instructional-design-portfolio.git
+git remote add origin https://github.com/kaganlove/instructional-design-portfolio.git
 
 # Push to your GitHub repository
 git push -u origin main
@@ -38,7 +38,7 @@ Once the code is pushed:
 4. Under **Build and deployment**, set the source to **Deploy from a branch**.
 5. Under **Branch**, select `main` and the folder `/ (root)`.
 6. Click **Save**.
-7. Wait 1–2 minutes. GitHub will display a notification banner at the top of the Pages settings showing your live URL (e.g., `https://YOUR_GITHUB_USERNAME.github.io/instructional-design-portfolio/`).
+7. Wait 1–2 minutes. GitHub will display a notification banner at the top of the Pages settings showing your live URL (e.g., `https://kaganlove.github.io/instructional-design-portfolio/`).
 
 ---
 
