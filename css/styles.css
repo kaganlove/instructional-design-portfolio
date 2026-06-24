@@ -1493,10 +1493,13 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
     .nav-container {
         flex-wrap: wrap;
         height: auto;
-        padding: 12px 20px;
+        padding: 10px 16px;
         justify-content: space-between;
     }
     nav {
@@ -1504,25 +1507,41 @@ footer {
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-top: 8px;
+        margin-top: 6px;
         border-top: 1.5px solid hsl(var(--border-color-hsl));
-        padding-top: 10px;
+        padding-top: 8px;
     }
     .nav-links {
         display: flex;
-        gap: 16px;
+        gap: 12px;
         margin: 0;
         padding: 0;
         list-style: none;
     }
     .nav-link {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         padding: 4px 0;
     }
     .nav-actions .btn-primary {
-        display: none; /* Hide primary CTA button on mobile header to save space */
+        display: none !important; /* Hide primary CTA button on mobile header to save space */
     }
 
+    /* Tighten vertical spacing across sections */
+    .hero {
+        padding: 90px 0 30px 0;
+        min-height: auto;
+    }
+    .section {
+        padding: 45px 0;
+    }
+    .section-header {
+        margin-bottom: 28px;
+    }
+    .filter-tabs {
+        margin-bottom: 24px;
+    }
+
+    /* Hero elements */
     .hero-grid {
         display: flex;
         flex-direction: row;
@@ -1539,7 +1558,7 @@ footer {
     .hero-profile-photo {
         width: 100px !important;
         height: 100px !important;
-        border-radius: 50% !important;
+        border-radius: var(--radius-md) !important; /* Keep as rounded square to match desktop style */
         border-width: 2px !important;
     }
     .hero-title {
@@ -1558,13 +1577,31 @@ footer {
         font-size: 0.85rem;
     }
 
+    /* Case study subpages spacing */
+    .case-study-hero {
+        padding: 90px 0 30px 0;
+    }
     .case-study-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        margin-bottom: 16px;
     }
     .case-study-summary-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
+        margin-top: 24px;
+        padding-top: 16px;
     }
+    .case-study-content {
+        padding: 30px 0;
+    }
+    .cs-section {
+        margin-bottom: 32px;
+    }
+    .cs-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+    }
+
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
         gap: 24px;
@@ -1625,6 +1662,30 @@ footer {
     }
     .project-meta {
         padding-top: 8px;
+    }
+
+    /* Extra tight styling for very small mobile screens */
+    .logo {
+        font-size: 1.15rem;
+    }
+    .nav-links {
+        gap: 8px;
+    }
+    .nav-link {
+        font-size: 0.75rem;
+    }
+    .hero-grid {
+        gap: 16px;
+    }
+    .hero-profile-photo {
+        width: 85px !important;
+        height: 85px !important;
+    }
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    .hero-description {
+        font-size: 0.85rem;
     }
 }
 
