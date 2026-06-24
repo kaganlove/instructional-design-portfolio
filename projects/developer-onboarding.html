@@ -41,13 +41,13 @@
         <div class="container case-study-header-grid">
             <div>
                 <span class="hero-subtitle">Flagship Technical Case Study</span>
-                <h1 class="case-study-title" id="case-study-main-title">Developer Onboarding Module:<br><span>Building & Testing a REST API Integration</span></h1>
+                <h1 class="case-study-title" id="case-study-main-title">Developer Onboarding Module:<br><span>Insurance Claims REST API Integration</span></h1>
             </div>
             
             <div class="case-study-summary-grid">
                 <div>
                     <div class="summary-item-label">Target Audience</div>
-                    <div class="summary-item-value">Junior Developers / Partner Engineers</div>
+                    <div class="summary-item-value">Partner Developers / Integration Engineers</div>
                 </div>
                 <div>
                     <div class="summary-item-label">Duration</div>
@@ -55,7 +55,7 @@
                 </div>
                 <div>
                     <div class="summary-item-label">Focus Area</div>
-                    <div class="summary-item-value">API Integration & Debugging</div>
+                    <div class="summary-item-value">Insurance API Integration</div>
                 </div>
                 <div>
                     <div class="summary-item-label">ID Model</div>
@@ -74,10 +74,10 @@
                 <section class="cs-section">
                     <h3>Project Overview & Challenge</h3>
                     <p style="margin-bottom: 16px;">
-                        Onboarding new developers or third-party partner integration engineers is a significant operational bottleneck. When documentation is dense or lacking structured onboarding pathways, developers take longer to achieve their first successful API call (time-to-first-API-call). This results in increased support tickets and delayed product launches.
+                        Onboarding third-party partner developers or integration engineers to connect their custom apps to a core P&C Insurance Claims API is a major operational bottleneck. Dense documentation and unstructured pathways lead to high time-to-first-API-call metrics, triggering extensive developer support tickets and delaying portal launches.
                     </p>
                     <p>
-                        This module was designed as a performance-driven, interactive walkthrough to guide junior engineers through configuring credentials, making authenticated requests, inspecting responses, and handling HTTP errors in a sandbox environment.
+                        This onboarding module serves as a hands-on, interactive learning path. It guides developers through setting up API keys, formatting claims submission JSON payloads, making authenticated POST/GET calls to a mock claims sandbox, and debugging common HTTP response errors.
                     </p>
                 </section>
 
@@ -134,8 +134,8 @@
                                     Executing calls using simulated code snippets and analyzing JSON payloads.
                                 </p>
                                 <ul style="padding-left:20px; font-size:0.9rem; color:hsl(var(--text-muted-hsl));">
-                                    <li>Performing a GET request to retrieve account details</li>
-                                    <li>Extracting specific data attributes from standard JSON response structures</li>
+                                    <li>Submitting a POST request to submit an auto claim payload</li>
+                                    <li>Extracting claim ID and status attributes from standard claims JSON response structures</li>
                                 </ul>
                             </div>
                         </div>
@@ -163,7 +163,7 @@
                 <section class="cs-section" id="lab-section">
                     <h3>Hands-on Lab Snippets</h3>
                     <p>
-                        Developers learn by writing and testing commands. This terminal simulation displays code blocks for making authenticated GET requests to retrieve user configurations. Select a tab to see different language syntaxes:
+                        Developers learn by writing and testing commands. This terminal simulation displays code blocks for making authenticated POST requests to submit auto claims. Select a tab to see different language syntaxes:
                     </p>
 
                     <div class="lab-simulator">
@@ -183,25 +183,37 @@
                             <!-- cURL -->
                             <div class="lab-pane active" id="pane-curl">
                                 <div class="lab-code"><span class="lab-code-comment"># Set your environment variable credentials</span>
-export API_KEY="your_api_token_here"
+export API_KEY="your_claims_sandbox_token"
 
-<span class="lab-code-comment"># Execute an authenticated request to retrieve account detail list</span>
-curl -X GET "https://api.sandbox-platform.com/v1/accounts" \
+<span class="lab-code-comment"># Submit a new auto insurance claim request</span>
+curl -X POST "https://api.claimcenter-sandbox.com/v1/claims" \
   -H "Authorization: Bearer $API_KEY" \
-  -H "Accept: application/json"</div>
+  -H "Content-Type: application/json" \
+  -d '{
+    "policyNumber": "POL-88291",
+    "claimType": "Auto",
+    "lossDate": "2026-06-15",
+    "estimatedLoss": 4200
+  }'</div>
                             </div>
                             <!-- JS -->
                             <div class="lab-pane" id="pane-js">
                                 <div class="lab-code"><span class="lab-code-keyword">const</span> apiKey = process.env.API_KEY;
 
-<span class="lab-code-function">async function</span> <span class="lab-code-function">fetchAccountDetails</span>() {
+<span class="lab-code-function">async function</span> <span class="lab-code-function">submitClaim</span>() {
   <span class="lab-code-keyword">try</span> {
-    <span class="lab-code-keyword">const</span> response = <span class="lab-code-keyword">await</span> <span class="lab-code-function">fetch</span>(<span class="lab-code-string">'https://api.sandbox-platform.com/v1/accounts'</span>, {
-      method: <span class="lab-code-string">'GET'</span>,
+    <span class="lab-code-keyword">const</span> response = <span class="lab-code-keyword">await</span> <span class="lab-code-function">fetch</span>(<span class="lab-code-string">'https://api.claimcenter-sandbox.com/v1/claims'</span>, {
+      method: <span class="lab-code-string">'POST'</span>,
       headers: {
         <span class="lab-code-string">'Authorization'</span>: <span class="lab-code-string">`Bearer ${apiKey}`</span>,
-        <span class="lab-code-string">'Accept'</span>: <span class="lab-code-string">'application/json'</span>
-      }
+        <span class="lab-code-string">'Content-Type'</span>: <span class="lab-code-string">'application/json'</span>
+      },
+      body: JSON.stringify({
+        policyNumber: <span class="lab-code-string">'POL-88291'</span>,
+        claimType: <span class="lab-code-string">'Auto'</span>,
+        lossDate: <span class="lab-code-string">'2026-06-15'</span>,
+        estimatedLoss: 4200
+      })
     });
 
     <span class="lab-code-keyword">if</span> (!response.ok) {
@@ -211,7 +223,7 @@ curl -X GET "https://api.sandbox-platform.com/v1/accounts" \
     <span class="lab-code-keyword">const</span> data = <span class="lab-code-keyword">await</span> response.<span class="lab-code-function">json</span>();
     console.<span class="lab-code-function">log</span>(<span class="lab-code-variable">data</span>);
   } <span class="lab-code-keyword">catch</span> (error) {
-    console.<span class="lab-code-function">error</span>(<span class="lab-code-string">'Failed to fetch details:'</span>, error);
+    console.<span class="lab-code-function">error</span>(<span class="lab-code-string">'Failed to submit claim:'</span>, error);
   }
 }</div>
                             </div>
@@ -221,15 +233,21 @@ curl -X GET "https://api.sandbox-platform.com/v1/accounts" \
 <span class="lab-code-keyword">import</span> requests
 
 api_key = os.getenv(<span class="lab-code-string">"API_KEY"</span>)
-url = <span class="lab-code-string">"https://api.sandbox-platform.com/v1/accounts"</span>
+url = <span class="lab-code-string">"https://api.claimcenter-sandbox.com/v1/claims"</span>
 headers = {
     <span class="lab-code-string">"Authorization"</span>: f<span class="lab-code-string">"Bearer {api_key}"</span>,
-    <span class="lab-code-string">"Accept"</span>: <span class="lab-code-string">"application/json"</span>
+    <span class="lab-code-string">"Content-Type"</span>: <span class="lab-code-string">"application/json"</span>
+}
+payload = {
+    <span class="lab-code-string">"policyNumber"</span>: <span class="lab-code-string">"POL-88291"</span>,
+    <span class="lab-code-string">"claimType"</span>: <span class="lab-code-string">"Auto"</span>,
+    <span class="lab-code-string">"lossDate"</span>: <span class="lab-code-string">"2026-06-15"</span>,
+    <span class="lab-code-string">"estimatedLoss"</span>: 4200
 }
 
-response = requests.get(url, headers=headers)
+response = requests.post(url, headers=headers, json=payload)
 
-<span class="lab-code-keyword">if</span> response.status_code == 200:
+<span class="lab-code-keyword">if</span> response.status_code == 201:
     data = response.json()
     print(<span class="lab-code-variable">data</span>)
 <span class="lab-code-keyword">else</span>:
@@ -240,12 +258,12 @@ response = requests.get(url, headers=headers)
                                 <div class="lab-code">{
   <span class="lab-code-keyword">"status"</span>: <span class="lab-code-string">"success"</span>,
   <span class="lab-code-keyword">"data"</span>: {
-    <span class="lab-code-keyword">"account_id"</span>: <span class="lab-code-string">"act_897543"</span>,
-    <span class="lab-code-keyword">"org_name"</span>: <span class="lab-code-string">"Apex Solutions"</span>,
-    <span class="lab-code-keyword">"environment"</span>: <span class="lab-code-string">"sandbox"</span>,
-    <span class="lab-code-keyword">"api_version"</span>: <span class="lab-code-string">"2026-04-01"</span>,
-    <span class="lab-code-keyword">"quota_limit"</span>: 10000,
-    <span class="lab-code-keyword">"quota_remaining"</span>: 9942
+    <span class="lab-code-keyword">"claimId"</span>: <span class="lab-code-string">"CLM-1042"</span>,
+    <span class="lab-code-keyword">"policyNumber"</span>: <span class="lab-code-string">"POL-88291"</span>,
+    <span class="lab-code-keyword">"claimType"</span>: <span class="lab-code-string">"Auto"</span>,
+    <span class="lab-code-keyword">"status"</span>: <span class="lab-code-string">"Open"</span>,
+    <span class="lab-code-keyword">"lossDate"</span>: <span class="lab-code-string">"2026-06-15"</span>,
+    <span class="lab-code-keyword">"estimatedLoss"</span>: 4200
   }
 }</div>
                             </div>
@@ -268,31 +286,31 @@ response = requests.get(url, headers=headers)
                             <div class="video-slide active" data-slide="0" data-duration="10">
                                 <div class="video-slide-content">
                                     <h4>Step 1: Set Credentials</h4>
-                                    <p>Open your command line and export the environment variables with your unique Sandbox API Token to prevent hardcoding secrets.</p>
+                                    <p>Open your command line and export the environment variables with your unique Claims Sandbox API Token to prevent hardcoding secrets.</p>
                                 </div>
                             </div>
-
+ 
                             <!-- Slide 2 -->
                             <div class="video-slide" data-slide="1" data-duration="15">
                                 <div class="video-slide-content">
                                     <h4>Step 2: Construct the Request</h4>
-                                    <p>Using JS or cURL, append the correct <code>Authorization: Bearer</code> header. Ensure you have targeted the Sandbox endpoint rather than Production.</p>
+                                    <p>Using JS or cURL, append the correct <code>Authorization: Bearer</code> header and define the claims intake payload object including <code>policyNumber</code> and <code>claimType</code>.</p>
                                 </div>
                             </div>
-
+ 
                             <!-- Slide 3 -->
                             <div class="video-slide" data-slide="2" data-duration="10">
                                 <div class="video-slide-content">
                                     <h4>Step 3: Run Validation Command</h4>
-                                    <p>Execute the query. Review the JSON result in your terminal. Look for a status status of <code>"success"</code> and your account ID.</p>
+                                    <p>Execute the query. Review the JSON result in your terminal. Look for a status of <code>"success"</code> and verify that a unique <code>claimId</code> has been generated.</p>
                                 </div>
                             </div>
-
+ 
                             <!-- Slide 4 -->
                             <div class="video-slide" data-slide="3" data-duration="10">
                                 <div class="video-slide-content">
                                     <h4>Step 4: Verify Database Side</h4>
-                                    <p>Log in to your developer console and confirm that the API call registers on the analytics dashboard, completing the integration check.</p>
+                                    <p>Log in to your developer console and confirm that the submitted claim registers on the Claims dashboard under the active policy number, completing the verification.</p>
                                 </div>
                             </div>
                         </div>
@@ -383,13 +401,24 @@ response = requests.get(url, headers=headers)
                             </div>
                             <div class="accordion-content">
                                 <p style="margin-bottom: 8px;"><strong>Root Cause:</strong> The request URL or base domain endpoint path was incorrect.</p>
-                                <p><strong>Resolution:</strong> Verify the spelling of the endpoint URL path. Junior developers often target <code>/account</code> instead of the plural <code>/accounts</code>, or miss the API version prefix (<code>/v1/</code>).</p>
+                                <p><strong>Resolution:</strong> Verify the spelling of the endpoint URL path. Developers often target singular <code>/claim</code> instead of the plural <code>/claims</code>, or miss the version prefix (e.g., <code>/v1/claims</code>).</p>
                             </div>
                         </div>
 
                         <div class="accordion-item" id="acc-3">
                             <div class="accordion-header">
-                                <span>3. JSON Parse Errors on Client Side</span>
+                                <span>3. Received "400 Bad Request" HTTP Status Code</span>
+                                <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </div>
+                            <div class="accordion-content">
+                                <p style="margin-bottom: 8px;"><strong>Root Cause:</strong> Missing or malformed required fields in the request JSON body.</p>
+                                <p><strong>Resolution:</strong> Verify that your request payload has all mandatory fields (e.g., <code>policyNumber</code>, <code>claimType</code>). Ensure the request header includes <code>Content-Type: application/json</code>.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" id="acc-4">
+                            <div class="accordion-header">
+                                <span>4. JSON Parse Errors on Client Side</span>
                                 <svg class="accordion-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                             </div>
                             <div class="accordion-content">
@@ -409,24 +438,24 @@ response = requests.get(url, headers=headers)
                         Target Persona
                     </h3>
                     <div class="persona-header" style="margin-bottom:12px; padding-bottom:12px;">
-                        <div class="persona-avatar">JD</div>
+                        <div class="persona-avatar">IE</div>
                         <div class="persona-title">
                             <h4>Jamie Davies</h4>
-                            <span>Junior Developer</span>
+                            <span>Integration Engineer</span>
                         </div>
                     </div>
                     <div class="persona-details" style="grid-template-columns: 1fr; gap: 8px; font-size: 0.85rem;">
                         <div class="persona-detail-item">
                             <strong>Technical Background</strong>
-                            <span>Bootcamp graduate, comfortable with JS syntax, but minimal experience debugging live APIs or using cURL commands.</span>
+                            <span>Bootcamp graduate, comfortable with JS/Python syntax, but minimal experience integrating Core Insurance platforms or formatting claims payloads.</span>
                         </div>
                         <div class="persona-detail-item">
                             <strong>Core Goal</strong>
-                            <span>Onboard quickly to write integrations without constantly waiting for senior developer assistance.</span>
+                            <span>Configure API integrations to connect partner portals to core Claims portals quickly and independently.</span>
                         </div>
                         <div class="persona-detail-item">
                             <strong>Frustrations</strong>
-                            <span>Overwhelmed by massive swagger documentation pages that lack beginner-friendly examples.</span>
+                            <span>Overwhelmed by enterprise-scale API references that lack clear, step-by-step claims intake examples.</span>
                         </div>
                     </div>
 
@@ -438,21 +467,21 @@ response = requests.get(url, headers=headers)
                         <div class="objective-item" style="padding:12px;">
                             <div class="objective-icon">1</div>
                             <div class="objective-content">
-                                <p style="font-size:0.85rem;">Format an authenticated GET request using header tokens without exposing keys.</p>
+                                <p style="font-size:0.85rem;">Format an authenticated POST request using header tokens and a claims payload without exposing keys.</p>
                                 <span class="objective-bloom">Bloom's: Apply</span>
                             </div>
                         </div>
                         <div class="objective-item" style="padding:12px;">
                             <div class="objective-icon">2</div>
                             <div class="objective-content">
-                                <p style="font-size:0.85rem;">Extract specific attributes from the returned JSON response payload.</p>
+                                <p style="font-size:0.85rem;">Extract unique claims identifiers (e.g. claimId) and status details from JSON response payloads.</p>
                                 <span class="objective-bloom">Bloom's: Analyze</span>
                             </div>
                         </div>
                         <div class="objective-item" style="padding:12px;">
                             <div class="objective-icon">3</div>
                             <div class="objective-content">
-                                <p style="font-size:0.85rem;">Debug integration bugs using HTTP status code responses (401, 404).</p>
+                                <p style="font-size:0.85rem;">Debug integration bugs using HTTP status code responses (400, 401, 404).</p>
                                 <span class="objective-bloom">Bloom's: Evaluate</span>
                             </div>
                         </div>

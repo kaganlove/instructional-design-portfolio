@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------
     const quizQuestions = [
         {
-            question: "Which Authorization header format is standard and correct for Bearer token credentials?",
+            question: "When authenticating requests to the Claims API, which header format is correct for transmitting the sandbox token?",
             options: [
                 "Authorization: Token sandbox_key_abc123",
                 "Authorization: Bearer sandbox_key_abc123",
@@ -174,26 +174,26 @@ document.addEventListener('DOMContentLoaded', () => {
             explanation: "The OAuth 2.0 / Bearer scheme utilizes the standard 'Authorization' header prefix, followed by the keyword 'Bearer' and a single space, then the token."
         },
         {
-            question: "If the API returns a '404 Not Found' status code, which troubleshooting step is most relevant?",
+            question: "A developer submits a claim request payload but receives a '400 Bad Request' response with the message 'Missing required field policyNumber'. What is the correct troubleshooting action?",
             options: [
-                "Verify that your authorization token is not expired.",
-                "Wait 60 seconds to avoid exceeding the API rate limit quota.",
-                "Verify the endpoint base URL spelling and check for missing path variables.",
-                "Submit a POST request instead because GET requests are not allowed."
+                "Regenerate the Bearer authorization token and try again.",
+                "Verify the spelling of the endpoint path variables.",
+                "Check the request JSON body to ensure 'policyNumber' is specified and spelled correctly.",
+                "Submit a GET request instead of a POST request."
             ],
             correctIndex: 2,
-            explanation: "A 404 HTTP status code indicates that the server cannot map the requested URI to an existing resource. Double check resource path plurals and API version numbers."
+            explanation: "An HTTP 400 Bad Request indicates that the server cannot process the request due to a client-side input error. In this case, verifying that the JSON payload body has all required fields (like policyNumber) is the correct fix."
         },
         {
-            question: "Why should developers store API keys in environment variables instead of hardcoding them in code files?",
+            question: "Why is it critical for developers to store the claims sandbox API key in an environment variable instead of hardcoding it directly in integration scripts?",
             options: [
-                "To prevent accidental leakage of secrets to public version control (e.g. GitHub repos).",
-                "Because environment variables make API requests process 10x faster.",
-                "Because hardcoded keys are rejected by the browser's JSON parser.",
-                "To allow the API to bypass rate-limiting checks."
+                "To prevent credentials from being committed to public repositories (e.g. GitHub).",
+                "To bypass API rate-limiting checks.",
+                "Because claims JSON payloads require runtime environment variables to parse.",
+                "Because hardcoded values block HTTPS encryption."
             ],
             correctIndex: 0,
-            explanation: "Hardcoded API keys are easily exposed when codebase files are pushed to shared remote systems. Environment variables dynamically load keys at runtime to protect credentials."
+            explanation: "Hardcoding secrets risks accidental exposure in public version control. Using environment variables dynamically loads the claims API key at runtime, securing the integration."
         }
     ];
 
